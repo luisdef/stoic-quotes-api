@@ -1,0 +1,16 @@
+* { padding: 1rem 0; margin: 0; box-sizing: border-box }
+body {
+  padding: 3rem;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center
+}
+p,h3 { font-family: sans-serif }
+p { font-size: 1.3rem }
+span { line-height: 2.2rem; font-size: 1.3rem; font-family: monospace; padding: 0.3rem; background-color: #ededed; border-radius: 8px }
+h3 { font-size: 3rem; color: #333 }
+.json, .json-in { font-family: monospace }
+.json-in { text-indent: 2rem; }
+.return-example {  background-color: #ededed; padding: 0.2rem; border-radius: 8px; width: 100% }
+.return-example * { word-wrap: unset }
