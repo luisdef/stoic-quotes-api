@@ -1,7 +1,8 @@
 # API De Frases Estóicas
 
-###
-- Link: [https://luisdef-stoic-api.herokuapp.com](https://luisdef-stoic-api.herokuapp.com/);
+Aplicação simples em Node.js que retorna um objeto JavaScript após uma requisição `GET`.
+
+Link: [https://luisdef-stoic-api.herokuapp.com](https://luisdef-stoic-api.herokuapp.com/);
 
 ### Utilização
 
