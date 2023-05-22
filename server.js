@@ -1,8 +1,10 @@
 const express = require("express");
-const app = express();
-const data = require("./quotes.json");
 const path = require("path");
 const cors = require("cors");
+
+const app = express();
+
+const data = require("./quotes.json");
 
 const port = process.env.PORT || 3000;
 
