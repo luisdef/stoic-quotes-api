@@ -36,6 +36,10 @@ app.get("/api/quote/random", (req, res) => {
   res.json(randomQuote);
 });
 
+app.use((req, res, next) => {
+  res.status(404).sendFile(__dirname + '/info/404.html');
+});
+
 app.listen(port, () => {
   console.info("Aplicação rodando na porta " + port);
 });
