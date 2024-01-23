@@ -10,6 +10,7 @@ const port = process.env.PORT || 3000;
 
 // Define a pasta root (para as instruções por /info/info.html)
 app.use(express.static(path.join(__dirname, "info")));
+app.use(express.static(path.join(__dirname, "client")));
 
 app.use((req, res, next) => {
   // Qual site tem permissão de realizar a conexão, no exemplo abaixo está o "*" indicando que qualquer site pode fazer a conexão
@@ -23,6 +24,10 @@ app.use((req, res, next) => {
 });
 
 app.get("/", (req, res) => {
+  res.sendFile(path.join(__dirname, "/client/index.html"));
+});
+
+app.get("/api", (req, res) => {
   res.sendFile(path.join(__dirname, "/info/info.html"));
 });
 
