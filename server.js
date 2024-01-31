@@ -1,12 +1,15 @@
-const express = require("express");
-const path = require("path");
-const cors = require("cors");
+import express from 'express';
+import path from 'path';
+import { fileURLToPath } from 'url';
+import cors from 'cors';
+import { getRandomQuote } from './database.js';
 
 const app = express();
 
-const data = require("./quotes.json");
-
 const port = process.env.PORT || 3000;
+
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = path.dirname(__filename);
 
 // Define a pasta root (para as instruções por /info/info.html)
 app.use(express.static(path.join(__dirname, "info")));
@@ -31,14 +34,9 @@ app.get("/api", (req, res) => {
   res.sendFile(path.join(__dirname, "/info/info.html"));
 });
 
-function getQuote() {
-  let indexOfSelectedQuote = Math.floor(Math.random() * data.length);
-  return data[indexOfSelectedQuote];
-}
-
-app.get("/api/quote/random", (req, res) => {
-  const randomQuote = getQuote();
-  res.json(randomQuote);
+app.get("/api/quote/random", async (req, res) => {
+  const frase = await getRandomQuote();
+  res.json(frase);
 });
 
 app.use((req, res, next) => {
