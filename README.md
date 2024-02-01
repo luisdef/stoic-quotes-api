@@ -43,7 +43,7 @@ A estrutura da tabela é a seguinte:
 
 | .env | |
 | -- | -- |
-| HOST      | 'localhost' |
+| HOST_DB   | 'localhost' |
 | USER_DB   | 'user'      |
 | PASSWD_DB | 'password'  |
 | DATABASE  | 'database'  |
