@@ -5,9 +5,8 @@
   "main": "index.js",
   "type": "module",
   "scripts": {
-    "start": "node --env-file .env server.js",
-    "test-db": "node --env-file .env database.js",
-    "dev": "nodemon --env-file .env server.js"
+    "start": "node --env-file .env app/server.js",
+    "dev": "nodemon --env-file .env app/server.js"
   },
   "keywords": [],
   "author": "",
