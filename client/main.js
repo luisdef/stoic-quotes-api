@@ -1,4 +1,4 @@
-const url = `http://localhost:3000/api/quote/random`;
+const url = `https://luisdef-stoic-quotes.onrender.com/api/quote/random`;
 
 let fraseI = document.querySelector(".text");
 let autor = document.querySelector(".author");
