@@ -18,6 +18,6 @@
     "mysql2": "^3.9.1"
   },
   "devDependencies": {
-    "nodemon": "^2.0.16"
+    "nodemon": "^2.0.22"
   }
 }
