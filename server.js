@@ -36,7 +36,7 @@ app.get("/api", (req, res) => {
 
 app.get("/api/quote/random", async (req, res) => {
   const frase = await getRandomQuote();
-  res.json(frase);
+  if (frase) res.json(frase);
 });
 
 app.use((req, res, next) => {
